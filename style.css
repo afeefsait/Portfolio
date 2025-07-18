@@ -1,3 +1,106 @@
-.h1{
-    color: red;
+:root{
+    --text-colour:rgb(2, 2, 2);
+    --link-colour:red;
+    --background-colour:white;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family:'poppins',sans-serif;
+    background-color: var(--background-colour);
+}
+a{
+    color: var(--link-colour);
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 80px;
+}
+nav .left a{
+    color: var(--text-colour);
+    font-size: 22px;
+    font-weight: 600;
+}
+nav .right a{
+    color: var(--text-colour);
+    margin: 0 10px;
+}
+nav .right a:last-child{
+    color: var(--background-colour);
+    background-color: var(--text-colour);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+nav .right a span{
+    margin-left: 5px;
+}
+
+.hero-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+.hero-section .text{
+    flex: 5;
+}
+.hero-section .text h2{
+    font-size: 45px;
+}
+.hero-section .text .links{
+    margin-top: 25px;
+}
+.hero-section .text .links a{
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px  solid var(--link-colour);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: 1s;
+}
+.hero-section .text .links a:hover{
+    color: var(--text-colour);
+    border: 2px solid var(--text-colour);
+
+
+}
+.hero-section .headshot{
+    flex: 2;
+    display: flex;
+}
+.hero-section .headshot img{
+    border-radius: 50%;
+    width: 310px;
+    height: 310px;
+}
+
+
+@media {
+    nav{
+       padding: 0 20px;
+    }
+    nav .right a{
+        font-size: 22px;
+    }
+     nav .right a:last-child{
+        color: var(--text-colour);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span{
+        display: none;
+    }
 }
